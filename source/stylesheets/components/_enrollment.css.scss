@@ -1,0 +1,350 @@
+@import 'compass/css3/box-shadow';
+@import 'compass/utilities/general/min';
+
+/*
+An Enrollment panel, appearing primarily on the Course Dashboard.
+
+.auditing  - A course being audited
+.enrolled  - An enrolled course
+.certified - A completed course that has been certified
+.completed - A completed course's panel
+
+No styleguide reference.
+*/
+.enrollment {
+  $width: 1060px;
+  @include box-shadow($light-gray 0 0 10px);
+  background-color:#fcfcfc;
+  margin-bottom:30px;
+  line-height:1;
+  width: $width;
+
+  .enrollment-header {
+    width:$width;
+    display:inline-block;
+    border-bottom:1px dotted #e4e6e7;
+    padding:1px;
+
+    .course-thumbnail {
+      float:left;
+      margin-right:5px;
+      margin-left:5px;
+      margin-top:2px;
+    }
+
+    .title {
+      margin:19px 0px 0px 2px;
+      line-height:1;
+      width:600px;
+    }
+
+    .continue {
+      width:199px;
+      line-height:49px;
+
+      .btn {
+        display:block;
+        padding:0px;
+        line-height:49px;
+        margin:0px 2px 0px 0px;
+      }
+    }
+  }
+
+  .completed-at {
+    @include min-height(72px);
+    @extend .roman;
+    font-size:12px;
+    padding:0px 10px;
+    border-left:1px dotted #e4e6e7;
+    border-right:1px dotted #e4e6e7;
+    width:357px;
+    display: inline-block;
+    margin-top:2px;
+
+    .icon {
+      color:$green;
+      margin-right:5px;
+    }
+
+    a,
+    strong {
+      @extend .bold;
+    }
+
+    a {
+      color:$maroon;
+    }
+  }
+
+  .download {
+    width:328px;
+    text-align:center;
+    margin-top:2px;
+
+    .message {
+      em {
+        @extend .bold;
+        text-transform:uppercase;
+        font-size:12px;
+        display:block;
+        font-style:normal;
+      }
+
+      strong {
+        @extend .bold;
+        font-size:18px;
+        display:block;
+      }
+    } // .message
+
+  }
+
+  .enrollment-body {
+    width:$width;
+    display:inline-block;
+    border-bottom:1px dotted #e4e6e7;
+  }
+
+  .enrollment-footer {
+    width:$width;
+    display:inline-block;
+  }
+
+  .course-progress {
+    margin-top:27px;
+    float:left;
+    padding-left:40px;
+    width:540px;
+
+    h4 {
+      margin-bottom:2px;
+    }
+
+    .course-progress-bar {
+      // TODO: custom height and ui
+    }
+  }
+
+  .course-announcement {
+    @include min-height(100px);
+    padding-left:25px;
+    padding-top:24px;
+    float:right;
+    width:173px;
+    border-left:1px dotted #e4e6e7;
+    font-size:11px;
+    line-height:13px;
+    display:inline-block;
+
+    h4 {
+      margin-bottom:0px;
+    }
+
+    .announcement-text {
+      padding-right:40px;
+    }
+  } // .course-announcement
+
+  .course-grade-details {
+    .detail-tab {
+      @extend .bold;
+      font-size:12px;
+      padding-left:14px;
+      padding-right:20px;
+      border-right:1px dotted #e4e6e7;
+      float:left;
+      line-height:24px;
+
+      .icon-circle-x {
+        margin-left: 1px;
+      }
+
+      .opted-out {
+        color:#58616b;
+      }
+
+      a {
+        color:#000;
+
+        &:hover {
+          text-decoration:none;
+        }
+      }
+
+      a.btn-toggle {
+        margin-left:16px;
+
+        .icon-small {
+          @extend .icon-small-red-arrow-up;
+          vertical-align: middle;
+          margin-left: 4px;
+        }
+
+        &.collapsed {
+          .icon-small {
+            @extend .icon-small-red-arrow-down;
+          }
+        }
+      }
+
+      .incorrect {
+        color:$maroon;
+      }
+    }
+
+    .settings {
+      @extend .bold;
+      font-size:12px;
+      position:relative;
+
+      .icon-large-cog {
+        position:absolute;
+        top:7px;
+        right:5px;
+        z-index:2;
+      }
+
+      a {
+        color:#222;
+        padding:6px 11px;
+        display:inline-block;
+
+        &:hover {
+          text-decoration:none;
+        }
+      }
+
+      .btn-toggle {
+        cursor:pointer;
+
+        .panel {
+          position:absolute;
+          top:26px;
+          right:0px;
+          background-color:#fcfcfc;
+          border:1px solid #e5e5e5;
+          display:none;
+          z-index:1;
+
+          .tab {
+            position:absolute;
+            top:-28px;
+            right:-1px;
+            border-top:1px solid #e5e5e5;
+            border-right:1px solid #e5e5e5;
+            border-left:1px solid #e5e5e5;
+            background-color:#fcfcfc;
+            width:34px;
+            height:27px;
+          }
+
+          ul {
+            margin:0px;
+            padding:0px;
+            list-style-type:none;
+          }
+        }
+
+        &:hover {
+          i.icon-large {
+            @extend .icon-large-cog.active;
+          }
+
+          .panel {
+            display:block;
+          }
+        }
+      } // .btn-toggle
+    }
+  } // .course-grade-details
+
+  .grading-detail {
+    margin-left:25px;
+    padding-top:23px;
+  } // .grading-detail
+
+  &.auditing {
+
+  } // .auditing
+
+  &.enrolled {
+
+  } // .enrolled
+
+  &.certified,
+  &.completed {
+    .title {
+      width:284px;
+    }
+
+    .continue {
+      display:none;
+    }
+
+    .enrollment-header {
+      border-bottom:none;
+    }
+
+    .enrollment-body,
+    .enrollment-footer {
+      display:none;
+    }
+  }
+
+  &.certified {
+    .course-thumbnail {
+      margin-top:52px;
+    }
+
+    .title {
+      margin-top:69px;
+    }
+
+    .completed-at {
+      line-height:160px;
+    }
+
+    .download {
+      background:image-url('bg/certification.png') center no-repeat;
+      height:160px;
+
+      .message {
+        margin-top:51px;
+
+        strong {
+          margin-bottom:18px;
+        }
+      }
+    }
+  } // .certified
+
+  &.completed {
+    .course-thumbnail {
+      margin-top:12px;
+    }
+
+    .title {
+      margin-top:30px;
+    }
+
+    .completed-at {
+      line-height:80px;
+    }
+
+    .download {
+      .message {
+        margin-top:15px;
+
+        em {
+          margin-bottom:5px;
+        }
+      }
+    }
+  } // .completed
+
+  .course-elements-grid {
+    padding-top:0px;
+    text-align:left;
+  }
+}

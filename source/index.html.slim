@@ -1,0 +1,8 @@
+- content_for :page_classes, 'dashboard-layout'
+
+h1.section-title Dashboard
+
+h2.status Courses in Progress
+
+- (1..4).to_a.each do |n|
+  = partial "views/enrollments/enrollment_#{n}"

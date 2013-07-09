@@ -1,0 +1,178 @@
+.enrollment.enrolled
+  .enrollment-header
+    .course-thumbnail
+      = image_tag 'courses/icons/quantum-mechanics-i.png'
+    h3.title.pull-left
+      | Quantum Mechanics, Part I
+    .continue.pull-right
+      a.btn.btn-large.btn-action.btn-red href="#"
+        | Start
+        i.icon.icon-arrow-thin-right
+  .enrollment-body
+    .course-progress
+      h4
+        | Course Progress
+        i.icon.icon-circle-i data-html="true" data-original-title="&lt;strong&gt;Certification Requirements&lt;/strong&gt;&lt;br&gt;75% of completion&lt;br&gt;+ 75% of points" data-toggle="tooltip" title=""
+      .progress-bar
+        .progress
+          .bar style="width:0%"
+          .percentage style="left:0%"
+            .rule
+            .percent
+              | 0
+              span.symbol %
+    .course-element-counters
+      ul
+        li.text-center
+          i.icon.icon-video data-html="true" data-original-title="&lt;strong&gt;VIDEOS&lt;/strong&gt;&lt;br&gt;0/6" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-exercise data-html="true" data-original-title="&lt;strong&gt;EXERCISES&lt;/strong&gt;&lt;br&gt;0/5" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-problem data-html="true" data-original-title="&lt;strong&gt;PROBLEMS&lt;/strong&gt;&lt;br&gt;0/1" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-demonstration data-html="true" data-original-title="&lt;strong&gt;DEMONSTRATIONS&lt;/strong&gt;&lt;br&gt;0/1" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-discussion data-html="true" data-original-title="&lt;strong&gt;DISCUSSIONS&lt;/strong&gt;&lt;br&gt;0/1" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-review data-html="true" data-original-title="&lt;strong&gt;REVIEWS&lt;/strong&gt;&lt;br&gt;0/4" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-one-on-one data-html="true" data-original-title="&lt;strong&gt;ONE ON ONES&lt;/strong&gt;&lt;br&gt;0/1" data-toggle="tooltip" title=""
+          .counter
+            | 0
+    .course-announcement
+      .announcement-text
+  .enrollment-footer
+    .course-grade-details
+      .detail-tab
+        | YOUR GRADE
+        = succeed "/" do
+          span.incorrect 0
+        span.correct 11
+        a.btn-toggle.collapsed data-target="#grading-details-panel-2" data-toggle="collapse" href="#"
+          | Details
+          i.icon-small
+      .detail-tab
+        div data-toggle='tooltip' data-html='true' title='<strong>OPT OUT FROM GRADING</strong><br>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.'
+          a data-toggle="modal" href="#opt-out-modal"
+            | Opt out from grading
+            i.icon-circle-x
+          #opt-out-modal.opt-out-modal.modal.hide.fade aria-hidden="true" aria-labelledby="OptOutModal" role="dialog"
+            .modal-body
+              a.pull-right.icon-large.icon-large-circle-x aria-hidden="true" data-dismiss="modal" href="#"
+              h3
+                em> Are you sure you want to opt out from grading in
+                | Quantum Mechanics, Part I
+              .actions
+                a.btn.btn-large.btn-action.btn-leave data-disable-with="Opt out" href="#" Opt out
+                a.btn.btn-large.btn-action.btn-cancel data-dismiss="modal" href="#" Cancel
+  #grading-details-panel-2.collapse
+    .grading-detail.text-center
+      ul.course-elements-grid
+        li#course_module_element_18.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 1
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_7.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 1
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_8.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 2
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_9.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 1
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_10.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 2
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_41.course_module_element.element.problem-set.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-problem-set>
+              | Problems
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Problems Example
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /6 PTS

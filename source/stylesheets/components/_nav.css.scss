@@ -1,0 +1,14 @@
+/*
+A navigation element in the header.
+
+No Styleguide reference.
+*/
+.nav {
+  a {
+    color: $blue-gray;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

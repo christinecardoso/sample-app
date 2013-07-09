@@ -1,0 +1,44 @@
+/*
+An Opt-out modal.
+
+No styleguide reference.
+*/
+.opt-out-modal {
+  @include border-radius(0px);
+  text-align:center;
+  width:472px;
+  padding-bottom: 30px;
+
+  h3 {
+    @extend .bold;
+    font-size: 21px;
+    margin-bottom: 24px;
+    margin-top: 32px;
+
+    em {
+      @extend .roman;
+      font-size: 14px;
+      display: block;
+    }
+  }
+
+  .btn {
+    &.btn-large {
+      padding: 10px 15px 9px 15px;
+
+      &.btn-action {
+        @extend .bold-condensed;
+        background: none;
+        font-size: 18px;
+      }
+    }
+
+    &.btn-leave {
+      margin-right:9px;
+    }
+
+    &:hover {
+      border-color: #8f4550;
+    }
+  }
+}

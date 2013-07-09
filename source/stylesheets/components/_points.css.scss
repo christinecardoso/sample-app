@@ -1,0 +1,47 @@
+/*
+Points display, shown alongside a question or problem set.
+
+.correct   - Points display for a correct answer
+.incorrect - Points display for an incorrect answer
+
+No styleguide reference.
+*/
+.points {
+  @extend .bold-condensed;
+  color: $green;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  .point-amount {
+    display: inline-block;
+  }
+
+  .amount {
+    margin-top: 3px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    background-color: $green;
+    line-height: 9px;
+    padding: 15px 16px;
+    margin-left: 11px;
+    vertical-align: middle;
+  }
+
+  .message {
+    display: inline-block;
+    border-left: 1px dotted #ccc;
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+
+  &.incorrect {
+    color: $blue;
+
+    .amount {
+      background-color: $blue;
+    }
+  }
+}

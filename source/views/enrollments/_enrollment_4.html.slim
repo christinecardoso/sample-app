@@ -1,0 +1,302 @@
+.enrollment.enrolled
+  .enrollment-header
+    .course-thumbnail
+      = image_tag 'courses/icons/special-relativity.png'
+    h3.title.pull-left
+      | Special Relativity
+    .continue.pull-right
+      a.btn.btn-large.btn-action.btn-red href="#"
+        | Continue
+        i.icon.icon-arrow-thin-right
+  .enrollment-body
+    .course-progress
+      h4
+        | Course Progress
+        i.icon.icon-circle-i data-html="true" data-original-title="&lt;strong&gt;Certification Requirements&lt;/strong&gt;&lt;br&gt;75% of completion&lt;br&gt;+ 75% of points" data-toggle="tooltip" title=""
+      .progress-bar
+        .progress
+          .bar style="width:74%"
+          .percentage style="left:74%"
+            .rule
+            .percent
+              | 74
+              span.symbol %
+    .course-element-counters
+      ul
+        li.text-center
+          i.icon.icon-video data-html="true" data-original-title="&lt;strong&gt;VIDEOS&lt;/strong&gt;&lt;br&gt;15/16" data-toggle="tooltip" title=""
+          .counter
+            | 15
+        li.text-center
+          i.icon.icon-exercise data-html="true" data-original-title="&lt;strong&gt;EXERCISES&lt;/strong&gt;&lt;br&gt;1/8" data-toggle="tooltip" title=""
+          .counter
+            | 1
+        li.text-center
+          i.icon.icon-problem data-html="true" data-original-title="&lt;strong&gt;PROBLEMS&lt;/strong&gt;&lt;br&gt;0/5" data-toggle="tooltip" title=""
+          .counter
+            | 0
+        li.text-center
+          i.icon.icon-demonstration data-html="true" data-original-title="&lt;strong&gt;DEMONSTRATIONS&lt;/strong&gt;&lt;br&gt;11/11" data-toggle="tooltip" title=""
+          .counter
+            | 11
+        li.text-center
+          i.icon.icon-discussion data-html="true" data-original-title="&lt;strong&gt;DISCUSSIONS&lt;/strong&gt;&lt;br&gt;4/4" data-toggle="tooltip" title=""
+          .counter
+            | 4
+        li.text-center
+          i.icon.icon-review data-html="true" data-original-title="&lt;strong&gt;REVIEWS&lt;/strong&gt;&lt;br&gt;6/6" data-toggle="tooltip" title=""
+          .counter
+            | 6
+        li.text-center
+          i.icon.icon-one-on-one data-html="true" data-original-title="&lt;strong&gt;ONE ON ONES&lt;/strong&gt;&lt;br&gt;4/4" data-toggle="tooltip" title=""
+          .counter
+            | 4
+    .course-announcement
+      .announcement-text
+        h5 Final Exam
+        p Available soon!
+  .enrollment-footer
+    .course-grade-details
+      .detail-tab
+        | YOUR GRADE
+        = succeed "/" do
+          span.incorrect 1
+        span.correct 37
+        a.btn-toggle.collapsed data-target="#grading-details-panel-3" data-toggle="collapse" href="#"
+          | Details
+          i.icon-small
+      .detail-tab
+        div data-toggle='tooltip' data-html='true' title='<strong>OPT OUT FROM GRADING</strong><br>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.'
+          a data-toggle="modal" href="#opt-out-modal"
+            | Opt out from grading
+            i.icon-circle-x
+          #opt-out-modal.opt-out-modal.modal.hide.fade aria-hidden="true" aria-labelledby="OptOutModal" role="dialog"
+            .modal-body
+              a.pull-right.icon-large.icon-large-circle-x aria-hidden="true" data-dismiss="modal" href="#"
+              h3
+                em> Are you sure you want to opt out from grading in
+                | Special Relativity
+              .actions
+                a.btn.btn-large.btn-action.btn-leave data-disable-with="Opt out" href="#" Opt out
+                a.btn.btn-large.btn-action.btn-cancel data-dismiss="modal" href="#" Cancel
+  #grading-details-panel-3.collapse
+    .grading-detail.text-center
+      ul.course-elements-grid
+        li#course_module_element_32.course_module_element.element.problem-set.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-problem-set>
+              | Problems
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Problems Example
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /6 PTS
+        li#course_module_element_1.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 3
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_33.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 1
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_40.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 3
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_50.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 2
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_51.course_module_element.element.problem-set.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-problem-set>
+              | Problems
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Problems Example
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /6 PTS
+        li#course_module_element_71.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Test Module Exercise
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_75.course_module_element.element.problem-set.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-problem-set>
+              | Problems
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Test Problem
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /2 PTS
+        li#course_module_element_57.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 3
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_60.course_module_element.element.problem-set.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-problem-set>
+              | Problems
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Problems Example
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /6 PTS
+        li#course_module_element_92.course_module_element.element.exercise.unavailable.completed.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | SR 4
+            .points.img-circle
+              strong 1
+              span.available-points
+                | /1 PT
+        li#course_module_element_64.course_module_element.element.exercise.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-exercise>
+              | Exercise
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Excercise 1
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /1 PT
+        li#course_module_element_69.course_module_element.element.problem-set.unavailable.incomplete.enrolled
+          a.element-link href="#" title="Go to Course Element"
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-problem-set>
+              | Problems
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .display
+            .description
+              | Special Relativity Problems Example
+            .points.img-circle
+              strong 0
+              span.available-points
+                | /6 PTS
+        li#course_module_element_84.course_module_element.placeholder.problem-set.final-exam.unavailable.incomplete.enrolled
+          .element-header
+            .element-type.pull-left
+              i.icon.icon-status.icon-final-exam>
+              | Final Exam
+            .element-status.pull-right
+              i.icon.icon-small-check.completed-check
+          .element-body
+            .element-availability
+              | The final exam will be worth 3 points and will be available: June 4, 2013

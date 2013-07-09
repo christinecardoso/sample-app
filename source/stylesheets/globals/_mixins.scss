@@ -1,0 +1,61 @@
+@mixin antialiased {
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+@mixin font-size($size) {
+  @include rem(font-size, $size);
+}
+
+@mixin line-height($size) {
+  @include rem(line-height, $size);
+}
+
+/*
+Display as an equal height inline item, suitable for list items, etc
+@see: http://foohack.com/2007/11/cross-browser-support-for-inline-block-styling/
+@see: http://www.boogdesign.com/examples/floats.html
+
+Compatibility untested.
+*/
+@mixin inline-stack {
+  vertical-align:top;
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+}
+
+/*
+rem() is a Sass mixin that converts pixel values to rem values.
+@see: https://gist.github.com/1778907
+
+Compatibile in Safari 5, Chrome, Firefox 3.6+, and IE 9
+*/
+@mixin rem($property, $px_values) {
+  // Convert the baseline into rems
+  $baseline_rem: ($base-font-size / 1rem);
+  // Print the first line in pixel values
+  #{$property}: $px_values;
+  // If only one (numeric) value, return the property/value line for it.
+  @if type-of($px_values) == 'number' {
+    #{$property}: $px_values / $baseline_rem;
+  }
+  // If more than one value, create list & perform equations on each value
+  @else {
+    // Create an empty list that we can dump values into
+    $rem_values: ();
+    @each $value in $px_values {
+      // If the value is zero, return 0
+      @if $value == 0 {
+        $rem_values: append($rem_values, $value);
+      }
+      // If the value is not zero, convert it from px to rem
+      @else {
+        $rem_values: append($rem_values, ($value / $baseline_rem) );
+      }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem_values;
+  }
+}

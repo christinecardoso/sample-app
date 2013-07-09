@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'wsu-glyphs';
+  src: url(font-path('wsu-glyphs/wsu-glyphs.eot'));
+  src: url(font-path('wsu-glyphs/wsu-glyphs.eot#iefix')) format('embedded-opentype'),
+       url(font-path('wsu-glyphs/wsu-glyphs.woff')) format('woff'),
+       url(font-path('wsu-glyphs/wsu-glyphs.ttf')) format('truetype'),
+       url(font-path('wsu-glyphs/wsu-glyphs.svg#wsu-glyphs')) format('svg');
+  }
+
+[data-icon]:before {
+  @include antialiased;
+  font-family: 'wsu-glyphs';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+/*
+TODO: dry it up
+*/
+.icon-arrow-right,
+.icon-arrow-thin-down,
+.icon-arrow-thin-up,
+.icon-arrow-thin-left,
+.icon-arrow-thin-right,
+.icon-checkmarkcircle,
+.icon-circle-i,
+.icon-circle-x,
+.icon-course-video,
+.icon-demonstration,
+.icon-discussion,
+.icon-emptycircle,
+.icon-exercise,
+.icon-final-exam,
+.icon-fullcircle,
+.icon-large-check,
+.icon-one-on-one,
+.icon-problem,
+.icon-problem-set,
+.icon-settings,
+.icon-small-check,
+.icon-edit,
+.icon-video,
+.icon-review,
+.icon-review-video {
+  @include antialiased;
+  background-image:none;
+  font-family: 'wsu-glyphs';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size:16px;
+  color:#474c52;
+  vertical-align:text-bottom;
+}
+
+.icon-large-check:before {
+  content: "\2714";
+}
+.icon-review:before,
+.icon-review-video:before {
+  content: "\21ba";
+}
+.icon-one-on-one:before {
+  content: "\21cb";
+}
+.icon-arrow-thin-down:before {
+  content: "\2193";
+}
+.icon-circle-x:before {
+  content: "\2612";
+}
+.icon-final-exam:before,
+.icon-problem:before,
+.icon-problem-set:before {
+  content: "\2630";
+}
+.icon-exercise:before {
+  content: "\2635";
+}
+.icon-small-check:before {
+  content: "\2611";
+}
+.icon-settings:before {
+  content: "\2328";
+}
+.icon-circle-i:before {
+  content: "\261b";
+}
+.icon-edit:before {
+  content: "\270e";
+}
+.icon-video:before,
+.icon-course-video:before {
+  content: "\25b8";
+}
+.icon-demonstration:before {
+  content: "\21b8";
+}
+.icon-arrow-thin-left:before {
+  content: "\2190";
+}
+.icon-discussion:before {
+  content: "\21c4";
+}
+.icon-arrow-thin-right:before {
+  content: "\2192";
+}
+.icon-arrow-thin-up:before {
+  content: "\2191";
+}
+.icon-emptycircle:before {
+  content: "\25e6";
+}
+.icon-checkmarkcircle:before {
+  content: "\2713";
+}
+.icon-fullcircle:before {
+  content: "\25cf";
+}
+/*
+Overrides
+*/
+.icon-circle-i {
+  color:#cecece !important;
+
+  &:hover {
+    color:$red !important;
+  }
+}
+
+.icon-emptycircle,
+.icon-checkmarkcircle,
+.icon-fullcircle {
+  font-size: 12px;
+}

@@ -1,0 +1,297 @@
+/*
+A grid of course elements.
+
+No styleguide reference.
+*/
+
+.course-elements-grid {
+  list-style-type:none;
+  padding-top:72px;
+
+  /*
+  A course element grid item
+
+  .completed      - A completed element
+  .course-video   - A Video element
+  .demonstration  - A demonstration element
+  .discussion     - A Discussion element
+  .element        - An element module type
+  .exercise       - An Exercise element
+  .final-exam     - A Final Exam element
+  .module         - A module element that displays the course module title
+  .one-on-one     - A One on One element
+  .placeholder    - A placeholder module type
+  .problem-set    - A Problem Set element
+  .review-video   - A Review element
+
+  No styleguide reference
+  */
+  > li {
+    @include box-shadow($light-gray 0 0 8px);
+    @include inline-stack;
+    background-image: none;
+    margin-right:35px;
+    margin-bottom:27px;
+    width:158px;
+    height:181px;
+    border:1px solid #fff;
+    background-color: white;
+    position: relative;
+
+    .element-link{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      text-indent: -999em;
+      z-index: 2;
+    }
+
+    .element-header {
+      @extend .demi;
+      font-size:11px;
+      line-height:15px;
+      padding:3px 0px 4px 1px;
+      margin:0px 4px 0px 4px;
+      border-bottom:1px solid #e8e8e8;
+      width:148px;
+      display:inline-block;
+      color: #1b1e20;
+      text-transform: uppercase;
+
+      .element-type {
+        padding-top:4px;
+
+        > .icon-status {
+          color: #2a3033;
+          margin-right:4px;
+        }
+      }
+
+      .element-status {
+        margin:1px -5px 0px 0px;
+
+        .icon {
+          margin-right:11px;
+          font-size:2em;
+        }
+
+        .icon-small-check {
+          color: $green;
+          margin-top: -1px;
+        }
+
+        .completed-check {
+          display: none;
+        }
+      }
+
+      .num {
+        @extend .demi;
+        font-size:11px;
+        margin:3px 7px 0px 0px;
+      }
+    } // .panel-header
+
+    .element-body {
+      text-align:center;
+
+      .display {
+        height: 85px;
+        width: 150px;
+        margin: -5px auto 8px;
+        background-color: #000;
+        overflow: hidden;
+      }
+
+      .description {
+        color: #444;
+        font-size: 12px;
+        text-align: left;
+        margin: 0 5px 0;
+        line-height: 14px;
+      }
+
+      .points {
+        @extend .light;
+        margin-top:8px;
+        display:inline-block;
+        color:#fff;
+        text-align:center;
+        font-size:11px;
+        background-color: $button-blue;
+        line-height: 11px;
+        padding: 25px 35px;
+
+        strong {
+          @extend .roman;
+          display: block;
+          font-size:38px;
+          line-height: 1;
+        }
+      }
+    } // .element-body
+
+    .element-availability {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 14px 15px 0px;
+    }
+
+    &.element {
+
+    }
+
+    &.module {
+      background-color: #862635;
+      border: 3px solid #fff;
+      height: 177px;
+      width: 155px;
+      position: relative;
+
+      .element-body {
+        .title {
+          position: absolute;
+          top: 39%;
+          font-size: 16px;
+          width:148px;
+          line-height: 21px;
+        }
+
+        .position {
+          position: absolute;
+          bottom: 15px;
+          text-transform: uppercase;
+          color: #bea0a5;
+          font-size: 11px;
+          line-height: 15px;
+          width: 100%;
+        }
+      }
+    }
+
+    &.completed {
+      background-color: #eaeaea;
+
+      .element-body {
+        .points {
+          background-color: #bfbfbf;
+        }
+      }
+
+      .element-header {
+        .element-status {
+          .completed-check {
+            display: block;
+          }
+        }
+      }
+
+    } // .completed
+
+    &.placeholder {
+      background-color: #f3f3f3;
+
+      .element-header {
+        .element-type {
+          color: #bfbfbf;
+
+          > .icon-status {
+            color: #bfbfbf;
+          }
+        }
+
+        .element-status {
+          display: none;
+        }
+      }
+
+      .element-body {
+        color: #7b7b7e;
+      }
+    }
+
+    &.final-exam {
+      &.unavailable {
+        background-color: $button-blue;
+        border: none;
+        width: 160px;
+        height: 183px;
+
+        .element-header {
+          border-bottom: 1px solid #488195;
+        }
+
+        .element-body {
+          font-size: 12px;
+
+          .description {
+            @extend .demi;
+            line-height: 15px;
+            color: white;
+            width: 118px;
+            text-align: center;
+            margin: 15px auto 0;
+          }
+
+          .element-availability {
+            color: #fff;
+          }
+        }
+
+        .element-type {
+          color: white;
+
+          > .icon-status {
+            color: white;
+          }
+        }
+      }
+    } // .final-exam
+
+    &.exercise,
+    &.problem-set {
+      padding-top: 0px;
+
+      .element-body {
+        .display,
+        .description {
+          display: none;
+        }
+      }
+
+      &.placeholder {
+        .description {
+          display: block;
+        }
+      }
+    }
+
+    &.review-video,
+    &.course-video,
+    &.one-on-one,
+    &.demonstration,
+    &.discussion {
+      .element-body {
+        .points {
+          display: none;
+        }
+      }
+    }
+
+    &.discussion {
+      .element-body {
+        .display {
+          display: none;
+        }
+      }
+    }
+
+    &.placeholder, &.module {
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}

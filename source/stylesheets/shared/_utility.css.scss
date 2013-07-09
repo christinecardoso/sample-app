@@ -1,0 +1,13 @@
+/*
+Utility classes.
+
+No Styleguide reference.
+*/
+
+// Clearing floats
+// see: http://nicolasgallagher.com/micro-clearfix-hack/
+.cf { zoom: 1; }
+.cf:before,
+.cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+

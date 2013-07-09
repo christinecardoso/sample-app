@@ -1,0 +1,29 @@
+/*
+Additional tooltip styles
+
+No styleguide reference.
+*/
+.tooltip {
+  @extend .roman;
+
+  strong {
+    @extend .bold;
+    font-weight:normal;
+    text-transform:uppercase;
+  }
+}
+
+.media .tooltip {
+  .tooltip-inner {
+    max-width: none;
+    background: #063A48;
+    @extend .bold;
+    font-size: 13px;
+    line-height: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .tooltip-arrow {
+    border-right-color: #063A48;
+  }
+}

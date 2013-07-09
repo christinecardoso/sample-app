@@ -1,0 +1,27 @@
+/*
+A list of element counters. Defaults to horizontal
+
+No styleguide reference.
+*/
+.course-element-counters {
+  display:inline-block;
+
+  ul {
+    li {
+      margin-left:11px;
+      display:inline-block;
+
+
+      &:first-child {
+        margin-left:0px;
+      }
+
+      .counter {
+        @extend .bold;
+        font-size:11px;
+        color:#474c52;
+        margin-top:2px;
+      }
+    }
+  }
+}

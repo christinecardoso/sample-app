@@ -1,0 +1,14 @@
+{
+  "enrollment":
+  [
+    {
+      "completed": "true",
+      "completed_at": "Oct 8, 2012",
+      "score": "875",
+      "course": {
+        "title": "Warps and Curves in Space and Time",
+        "thumbnail": "icons/warps-and-curves.png"
+      }
+    }
+  ]
+}

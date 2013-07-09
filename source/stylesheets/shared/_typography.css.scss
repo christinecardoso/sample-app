@@ -1,0 +1,60 @@
+@import 'globals/all';
+@import "compass/css3/text-shadow";
+
+html {
+  font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+  color: #000;
+}
+
+/*
+Headings
+
+As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+
+When we define a heading we also define a corresponding class to go with it.
+This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+heading hierarchy.
+*/
+h1,.alpha{
+  @include font-size($h1-size);
+
+  &.section-title {
+    @include font-size(18px);
+    text-transform: uppercase;
+    color: $blue-gray-dark;
+  }
+}
+
+h2,.beta{
+  @include font-size($h2-size);
+
+  &.status {
+    @include text-shadow(0 1px 0 rgba(255, 255, 255, 1));
+    @include font-size(14px);
+    color: $maroon;
+    text-transform: uppercase;
+  }
+}
+
+h3,.gamma{
+  @include font-size($h3-size);
+}
+
+h4,.delta{
+  @include font-size($h4-size);
+}
+
+h5,.epsilon{
+  @include font-size($h5-size);
+}
+
+h6,.zeta{
+  @include font-size($h6-size);
+}
+
+/*
+Normalize font-weights.
+*/
+#{headings()}, p, ul, ol {
+  font-weight: normal;
+}

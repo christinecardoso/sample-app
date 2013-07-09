@@ -1,0 +1,162 @@
+@import "icons/*.png";
+@include all-icons-sprites;
+
+/*
+A Large Icon
+
+.icon-circle-arrow-right-large - A large circle pointing right
+.icon-circle-arrow-left-large  - A large circle pointing left
+.icon-circle-arrow-down-large  - A large circle pointing down
+.icon-circle-arrow-up-large    - A large circle pointing up
+.icon-circle-plus-large        - A large circle with a plus sign
+.icon-arrow-thin-right-large   - A large thin-lined arrow,pointing right
+
+No styleguide reference.
+*/
+.icon-large {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 4px;
+
+  &.icon-large-cog {
+    @include icons-sprite(large-cog);
+    width:icons-sprite-width(large-cog);
+    height:icons-sprite-height(large-cog);
+
+    &:hover,
+    &.active {
+      @include icons-sprite(large-cog-active);
+    }
+  }
+
+  &.icon-large-check-complete {
+    @include icons-sprite(large-check-complete);
+    width:icons-sprite-width(large-check-complete);
+    height:icons-sprite-height(large-check-complete);
+  }
+
+  &.icon-large-circle-x {
+    @include icons-sprite(large-circle-x);
+    width:icons-sprite-width(large-circle-x);
+    height:icons-sprite-height(large-circle-x);
+  }
+
+  // TODO: rename to `icon-large` over `-large`
+  &.icon-circle-arrow-right-large {
+    @include icons-sprite(circle-arrow-right);
+    width:icons-sprite-width(circle-arrow-right);
+    height:icons-sprite-height(circle-arrow-right);
+
+    &.icon-white {
+      @include icons-sprite(white-circle-arrow-right);
+      width:icons-sprite-width(white-circle-arrow-right);
+      height:icons-sprite-height(white-circle-arrow-right);
+    }
+  }
+
+  &.icon-circle-arrow-left-large {
+    @include icons-sprite(circle-arrow-left);
+    width:icons-sprite-width(circle-arrow-left);
+    height:icons-sprite-height(circle-arrow-left);
+
+    &.icon-white {
+      @include icons-sprite(white-circle-arrow-left);
+      width:icons-sprite-width(white-circle-arrow-left);
+      height:icons-sprite-height(white-circle-arrow-left);
+    }
+  }
+
+  &.icon-circle-arrow-down-large {
+    @include icons-sprite(circle-arrow-down);
+    width:icons-sprite-width(circle-arrow-down);
+    height:icons-sprite-height(circle-arrow-down);
+
+    &.icon-white {
+      @include icons-sprite(white-circle-arrow-down);
+      width:icons-sprite-width(white-circle-arrow-down);
+      height:icons-sprite-height(white-circle-arrow-down);
+    }
+  }
+
+  &.icon-circle-arrow-up-large {
+    @include icons-sprite(circle-arrow-up);
+    width:icons-sprite-width(circle-arrow-up);
+    height:icons-sprite-height(circle-arrow-up);
+
+    &.icon-white {
+      @include icons-sprite(white-circle-arrow-up);
+      width:icons-sprite-width(white-circle-arrow-up);
+      height:icons-sprite-height(white-circle-arrow-up);
+    }
+  }
+
+  &.icon-circle-plus-large {
+    @include icons-sprite(circle-plus);
+    width:icons-sprite-width(circle-plus);
+    height:icons-sprite-height(circle-plus);
+  }
+}
+
+/*
+A Small Icon.
+
+.icon-info-circle - A small circle that denotes an information link
+
+No styleguide reference.
+*/
+.icon-small {
+  vertical-align: middle;
+
+  &.icon-small-red-arrow-down {
+    @include icons-sprite(small-red-arrow-down);
+    width:icons-sprite-width(small-red-arrow-down);
+    height:icons-sprite-height(small-red-arrow-down);
+  }
+
+  &.icon-small-red-arrow-up {
+    @include icons-sprite(small-red-arrow-up);
+    width:icons-sprite-width(small-red-arrow-up);
+    height:icons-sprite-height(small-red-arrow-up);
+  }
+
+  &.icon-small-check-complete {
+    @include icons-sprite(small-check-complete);
+    width:icons-sprite-width(small-check-complete);
+    height:icons-sprite-height(small-check-complete);
+  }
+
+  &.icon-answer-checked {
+    @include icons-sprite(radio-answer-checked);
+    width:icons-sprite-width(radio-answer-checked);
+    height:icons-sprite-height(radio-answer-checked);
+  }
+
+  &.icon-answer-correct {
+    @include icons-sprite(radio-answer-correct);
+    width:icons-sprite-width(radio-answer-correct);
+    height:icons-sprite-height(radio-answer-correct);
+  }
+
+  &.icon-answer-incorrect {
+    @include icons-sprite(radio-answer-incorrect);
+    width:icons-sprite-width(radio-answer-incorrect);
+    height:icons-sprite-height(radio-answer-incorrect);
+  }
+
+  &.icon-answer-skipped {
+    @include icons-sprite(radio-answer-skipped);
+    width:icons-sprite-width(radio-answer-skipped);
+    height:icons-sprite-height(radio-answer-skipped);
+  }
+
+  &.icon-answer-unchecked {
+    @include icons-sprite(radio-answer-unchecked);
+    width:icons-sprite-width(radio-answer-unchecked);
+    height:icons-sprite-height(radio-answer-unchecked);
+  }
+}
+
+// TODO: remove
+.icon-white {
+  color: #fff;
+}

@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title = current_page.data.title || '100years - Sample App'
+
+    meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'
+    meta content='width=device-width,initial-scale=1.0' name='viewport'
+    meta content='A sample application to demonstrate frontend build processes.' name='description'
+
+    = stylesheet_link_tag 'application'
+
+  body class="#{yield_content(:page_classes)}"
+
+    .page data-role='page'
+
+      .header data-role='header'
+        a.brand href='/' Sample App
+
+      .content data-role='content'
+        = yield
+
+      .footer data-role='footer'
+
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'
+
+    javascript:
+      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.1.min.js"><\/script>')
+    = javascript_include_tag 'application'

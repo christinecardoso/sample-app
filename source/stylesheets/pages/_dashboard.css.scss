@@ -1,0 +1,112 @@
+@import 'compass/css3/transition';
+
+/*
+A Dashboard landing page.
+
+No Styleguide reference.
+*/
+.dashboard-layout {
+  .content {
+    min-width: 1010px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color:#000;
+    @include antialiased;
+  }
+
+  h1 {
+    @extend .bold;
+    font-size:18px;
+    color:#292c31;
+    text-transform:uppercase;
+  }
+
+  h2 {
+    @extend .bold;
+    @include text-shadow(0 1px 0 rgba(255, 255, 255, 1));
+    font-size:14px;
+    color:$red;
+    text-transform:uppercase;
+    margin-bottom:23px;
+  }
+
+  h3 {
+    @extend .roman;
+    @include font-size(18px);
+  }
+
+  h4 {
+    @extend .bold;
+    @include font-size(12px);
+    text-transform:uppercase;
+  }
+
+  h5 {
+    @extend .bold;
+    font-size:11px;
+    text-transform:uppercase;
+    margin-bottom:0px;
+  }
+
+  header {
+    margin-bottom:0px;
+    height:31px;
+  }
+
+  .courses-in-progress {
+    margin-bottom:45px;
+  }
+
+  .course-element-counters {
+    margin-top:42px;
+  }
+
+  .course-suggestions {
+    $width: 1060px;
+    @include box-shadow($grayLight 0 0 10px);
+    background-color:#fefefe;
+    margin-bottom:30px;
+    padding:26px 40px 22px;
+
+    h2 {
+      @extend .light;
+      font-size:50px;
+      line-height: 65px;
+      letter-spacing: 1px;
+      color:#000;
+      text-transform: none;
+      margin-bottom:14px;
+
+      a {
+        color:#a5293d;
+      }
+    }
+
+    ul.courses {
+      width:100%;
+      list-style-type: none;
+      margin: -10px 0 -25px;
+      li {
+        width:24%;
+        display: inline-block;
+        text-align: center;
+        a {
+          display: block;
+        }
+        img {
+          width: 80%;
+          @include transition-property(opacity);
+          @include transition-duration(0.15s);
+          @include opacity(0.6);
+        }
+
+        &:hover {
+          img {
+            @include opacity(1);
+          }
+        }
+      }
+    }
+  }
+}
